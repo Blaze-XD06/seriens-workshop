@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sereins Workshop</title>
+    <link rel="icon" type="image/png" href="pics/Screenshot from 2026-08-22 00-18-43.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: arial, roboto;
+            color: white;
+            background-color: black;
+            margin: 0px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            width: auto;
+            background-color: rgba(37, 150, 190);
+        }
+
+        .main-title {
+            margin: 0px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .header-link {
+            color: white;
+            text-decoration: none;            
+            font-size: 20px;
+            font-weight: bold;
+            padding: 4px;
+            border: solid 2px white;
+            border-radius: 15px;
+        }
+
+        main {
+            margin-left: 20px;
+        }
+
+        .mini-header {
+            font-size: large;
+        }
+
+        .sr-box {
+            height: 5px;
+            color: greenyellow;
+            margin-bottom: 5px;
+        }
+
+        .lv-selecter-box{
+            height: 40px;
+            display: flex;
+            margin-top: 0px;
+        }
+
+        .lv-selecter {
+            height: 30px;
+            color: white;
+            background-color: black;
+            margin-top: 10px;
+            margin-left: 10px;
+            padding: 4px;
+            border: solid 1px white;
+            border-radius: 7px;
+        }
+
+        .js-reload-button {
+            height: 30px;
+            margin-top: 10px;
+            margin-left: 5px;
+            color: white;
+            background-color: black;
+            padding: 6px;
+            border: solid 1px white;
+            border-radius: 7px;
+
+        }
+
+        .postives {
+            display: flex;
+            margin-bottom: 7px;
+        }
+
+        .postive-header {
+            border-bottom: 3px double white;
+        }
+
+        .stat-box {
+            display: flex;
+            height: 35px;
+            margin-left: 10px;
+        }
+
+        .quick-css {
+            height: 30px;
+            margin-top: 10px;
+            margin-left: 5px;
+            color: white;
+            background-color: black;
+            padding: 6px;
+            border: solid 1px white;
+            border-radius: 7px;
+        }
+
+        footer {
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <p class="main-title">Lazy Serein's Workshop</p>
+        </div>
+        <div>
+            <a href="" class="header-link">Weapons</a>
+        </div>
+    </header>
+
+    <main>
+        <p class="mini-header">Craftsman's Sttatting of Armor -Automatic Version-</p>
+        <p>A armor statting simulator that calculates steps, success rates, and material costs.</p>
+        <p>By default, this simulates statting for the latest level cap. To simulate another level, enter your character's level and press 'Reload.</p>
+
+        <div class="sr-box">
+            <p style="margin: 0px;">Sr 100%</p>
+        </div>
+
+        <div class="lv-selecter-box">
+            <p>Char LV</p>
+            <select name="char-lv" id="" class="lv-selecter">
+                <option value="320" >Lv 320</option>
+            </select>
+            <button class="js-reload-button">Reload</button>
+        </div>
+        <p class="postive-header">Positive Stats</p>
+
+        <div class="postives">
+            <div class="stat-box">
+                <p>Stat</p>
+                <select name="stat" id="" class="quick-css">
+                    <option value="0">
+                        <option value="0"></option>
+                    <option value="dex">MaxLv:32, Critical Rate (Enhance Critical) Pot:1</option>
+                    <option value="dex">MaxLv:32, Critical Rate% (Enhance Critical) Pot:1</option>
+                    <option value="dex">MaxLv:24, Critical Damage (Enhance Critical) Pot:3</option>
+                    <option value="dex">MaxLv12, Critical Damage% (Enhance Critical) Pot:10</option>
+                    <option value="atk">MaxLv:32, ATK (Enhance Attack) Pot:6</option>
+                    <option value="atk">MaxLv:16, Atk% (Enhance Attack) Pot:20</option>
+                    <option value="atk">MaxLv:32, MATK (Enhance Attack) Pot:6</option>
+                    <option value="atk">MaxLv:16, MATK% (Enhance Attack) Pot:20</option>
+                    <option value="atk">MaxLv:7, Stability% (Enhance Attack) Pot:20</option>
+                    <option value="atk">MaxLv:16, PhysicalPierce% (Enhance Attack) Pot:40</option>
+                    <option value="atk">MaxLv:16, Magic Pierce% (Enhance Attack) Pot:40</option>
+                    <option value="atk">MaxLv:32, ASPD (Enhance Speed) Pot:1</option>
+                    <option value="atk">MaxLv:22, ASPD% (Enhance Speed) Pot:1</option>
+                    <option value="atk">MaxLv:32, CSPD (Enhance Speed) Pot:1</option>
+                    <option value="atk">MaxLv:22, CSPD% (Enhance Speed) Pot:1</option>
+                    <option value="dex">MaxLv:32, STR (Enhance Stat) Pot:5</option>
+                    <option value="dex">MaxLv:10, STR% (Enhance Stat) Pot:10</option>
+                    <option value="dex">MaxLv:32, INT (Enhance Stat) Pot:5</option>
+                    <option value="dex">MaxLv:10, INT% (Enhance Stat) Pot:10</option>
+                    <option value="dex">MaxLv:32, VIT (Enhance Stat) Pot:5</option>
+                    <option value="dex">MaxLv:10, VIT% (Enhance Stat) Pot:10</option>
+                    <option value="dex">MaxLv:32, AGI (Enhance Stat) Pot:5</option>
+                    <option value="dex">MaxLv:10, AGI% (Enhance Stat) Pot:10</option>
+                    <option value="dex">MaxLv:32, Dex (Enhance Stat) Pot:5</option>
+                    <option value="dex">MaxLv:10, Dex% (Enhance Stat) Pot:10</option>
+                    <option value="dex">MaxLv:32, Natural HP regen (Enhance HP/MP) Pot:5</option>
+                    <option value="dex">MaxLv:10, Natural HP regen% (Enhance HP/MP) Pot:10</option>
+                    <option value="dex">MaxLv:16, Natural MP regen (Enhance HP/MP) Pot:10</option>
+                    <option value="dex">MaxLv:5, Natural MP regen% (Enhance HP/MP) Pot:20</option>
+                    <option value="dex">MaxLv:32, MaxHP (Enhance HP/MP) Pot:3</option>
+                    <option value="dex">MaxLv:14, MaxHP% (Enhance HP/MP) Pot:10</option>
+                    <option value="dex">MaxLv:21, MaxMP (Enhance HP/MP) Pot:6</option>
+                    <option value="dex">MaxLv:32, DEF (Enhance Defense) Pot:3</option>
+                    <option value="dex">MaxLv:14, DEF% (Enhance Defense) Pot:3</option>
+                    <option value="dex">MaxLv:32, MDEF (Enhance Defense) Pot:3</option>
+                    <option value="dex">MaxLv:14, MDEF% (Enhance Defense) Pot:3</option>
+                    <option value="dex">MaxLv:14, PhysicalResistance% (Enhance Defense) Pot:3</option>
+                    <option value="dex">MaxLv:14, Magic Resistance% (Enhance Defense) Pot:3</option>
+                    <option value="dex">MaxLv:18, Accuracy (Enhance Accuary) Pot:20</option>
+                    <option value="dex">MaxLv:7, Accuracy% (Enhance Accuary) Pot:40</option>
+                    <option value="dex">MaxLv:18, Dodge (Enhance Dodge) Pot:10</option>
+                    <option value="dex">MaxLv:7, Dodge% (Enhance Dodge) Pot:20</option>
+                    <option value="dex">MaxLv:24, Stronger Against Fire % (Enhance Elements) Pot:10</option>
+                    <option value="dex">MaxLv:24, Stronger Against Water % (Enhance Elements) Pot:10</option>
+                    <option value="dex">MaxLv:24, Stronger Against Wind % (Enhance Elements) Pot:10</option>
+                    <option value="dex">MaxLv:24, Stronger Against Earth % (Enhance Elements) Pot:10</option>
+                    <option value="dex">MaxLv:24, Stronger Against Light % (Enhance Elements) Pot:10</option>
+                    <option value="dex">MaxLv:24, Stronger Against Dark % (Enhance Elements) Pot:10</option>
+                    <option value="dex">MaxLv:28, Fire Resistance % (Enhance Elements) Pot:5</option>
+                    <option value="dex">MaxLv:28, Water Resistance % (Enhance Elements) Pot:5</option>
+                    <option value="dex">MaxLv:28, Wind Resistance % (Enhance Elements) Pot:5</option>
+                    <option value="dex">MaxLv:28, Earth Resistance % (Enhance Elements) Pot:5</option>
+                    <option value="dex">MaxLv:28, Light Resistance % (Enhance Elements) Pot:5</option>
+                    <option value="dex">MaxLv:28, Dark Resistance % (Enhance Elements) Pot:5</option>
+                    <option value="dex">MaxLv:28, Ailment Resistance % (Special Enhancement) Pot:20</option>
+                    <option value="dex">MaxLv:28, Guard Power (Special Enhancement) Pot:20</option>
+                    <option value="dex">MaxLv:28, Guard Rate % (Special Enhancement) Pot:20</option>
+                    <option value="dex">MaxLv:28, Evasion Rate % (Special Enhancement) Pot:20</option>
+                    <option value="dex">MaxLv:28, Aggro % (Special Enhancement) Pot:6</option>
+                    <option value="dex">MaxLv:12, % Reduce Dmg (Foe Epicenter) (Enhance Defense) Pot:3</option>
+                    <option value="dex">MaxLv:12, % Reduce Dmg (Player Epicenter) (Enhance Defense) Pot:3</option>
+                    <option value="dex">MaxLv:12, % Reduce Dmg (Stright Line) (Enhance Defense) Pot:3</option>
+                    <option value="dex">MaxLv:12, % Reduce Dmg (Charge) (Enhance Defense) Pot:3</option>
+                    <option value="dex">MaxLv:12, % Reduce Dmg (Meteor) (Enhance Defense) Pot:2</option>
+                    <option value="dex">MaxLv:12, % Reduce Dmg (Bullet) (Enhance Defense) Pot:2</option>
+                    <option value="dex">MaxLv:12, % Reduce Dmg (Bowling) (Enhance Defense) Pot:2</option>
+                    <option value="dex">MaxLv:12, % Reduce Dmg (Floor) (Enhance Defense) Pot:2</option>
+                    </option>
+                </select>
+            </div>
+            <div class="stat-box">
+                <p>Stat Lv</p>
+                <select name="stat-lv" id="" class="quick-css">
+                    <option value="max">max</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+        </div>
+
+                <div class="postives">
+            <div class="stat-box">
+                <p>Stat</p>
+                <select name="stat" id="Postive-Stat-Selecter" class="quick-css">
+                </select>
+            </div>
+            <div class="stat-box">
+                <p>Stat Lv</p>
+                <select name="stat-lv" id="" class="quick-css">
+                    <option value="0"></option>
+                    <option value="10">Max</option>
+                </select>
+            </div>
+        </div>
+
+                <div class="postives">
+            <div class="stat-box">
+                <p>Stat</p>
+                <select name="stat" id="" class="quick-css">
+                    <option value="0"></option>
+                    <option value="dex">MaxLv:10, Dex% (Enhance Stat) Pot:10</option>
+                    <option value="atk">MaxLv:16, Atk% (Enhance Attack) Pot:10</option>
+                    <option value="crit">MaxLv:24 Crit dmg flat (Enhance Crit) Pot:3</option>
+                    <option value="crit-rate">MaxLv:24 Crit rate (Enhance Crit) Pot:1</option>
+                    <option value="dex">Return:85pt, MaxLv:10, -Acc (Enhance Accuary) lv-18x</option>
+                </select>
+            </div>
+            <div class="stat-box">
+                <p>Stat Lv</p>
+                <select name="stat-lv" id="" class="quick-css">
+                    <option value="0"></option>
+                    <option value="10">Max</option>
+                </select>
+            </div>
+        </div>
+
+                <div class="postives">
+            <div class="stat-box">
+                <p>Stat</p>
+                <select name="stat" id="" class="quick-css">
+                    <option value="0"></option>
+                    <option value="dex">MaxLv:10, Dex% (Enhance Stat) Pot:10</option>
+                    <option value="atk">MaxLv:16, Atk% (Enhance Attack) Pot:10</option>
+                    <option value="crit">MaxLv:24 Crit dmg flat (Enhance Crit) Pot:3</option>
+                    <option value="crit-rate">MaxLv:24 Crit rate (Enhance Crit) Pot:1</option>
+                    <option value="dex">Return:85pt, MaxLv:10, -Acc (Enhance Accuary) lv-18x</option>
+                </select>
+            </div>
+            <div class="stat-box">
+                <p>Stat Lv</p>
+                <select name="stat-lv" id="" class="quick-css">
+                    <option value="0"></option>
+                    <option value="10">Max</option>
+                </select>
+            </div>
+        </div>
+
+                <div class="postives">
+            <div class="stat-box">
+                <p>Stat</p>
+                <select name="stat" id="" class="quick-css">
+                    <option value="0"></option>
+                    <option value="dex">MaxLv:10, Dex% (Enhance Stat) Pot:10</option>
+                    <option value="atk">MaxLv:16, Atk% (Enhance Attack) Pot:10</option>
+                    <option value="crit">MaxLv:24 Crit dmg flat (Enhance Crit) Pot:3</option>
+                    <option value="crit-rate">MaxLv:24 Crit rate (Enhance Crit) Pot:1</option>
+                    <option value="dex">Return:85pt, MaxLv:10, -Acc (Enhance Accuary) lv-18x</option>
+                </select>
+            </div>
+            <div class="stat-box">
+                <p>Stat Lv</p>
+                <select name="stat-lv" id="" class="quick-css">
+                    <option value="0"></option>
+                    <option value="10">Max</option>
+                </select>
+            </div>
+        </div>
+
+                <div class="postives">
+            <div class="stat-box">
+                <p>Stat</p>
+                <select name="stat" id="" class="quick-css">
+                    <option value="0"></option>
+                    <option value="dex">MaxLv:10, Dex% (Enhance Stat) Pot:10</option>
+                    <option value="atk">MaxLv:16, Atk% (Enhance Attack) Pot:10</option>
+                    <option value="crit">MaxLv:24 Crit dmg flat (Enhance Crit) Pot:3</option>
+                    <option value="crit-rate">MaxLv:24 Crit rate (Enhance Crit) Pot:1</option>
+                    <option value="dex">Return:85pt, MaxLv:10, -Acc (Enhance Accuary) lv-18x</option>
+                </select>
+            </div>
+            <div class="stat-box">
+                <p>Stat Lv</p>
+                <select name="stat-lv" id="" class="quick-css">
+                    <option value="0"></option>
+                    <option value="10">Max</option>
+                </select>
+            </div>
+        </div>
+
+                <div class="postives">
+            <div class="stat-box">
+                <p>Stat</p>
+                <select name="stat" id="" class="quick-css">
+                    <option value="0"></option>
+                    <option value="dex">MaxLv:10, Dex% (Enhance Stat) Pot:10</option>
+                    <option value="atk">MaxLv:16, Atk% (Enhance Attack) Pot:10</option>
+                    <option value="crit">MaxLv:24 Crit dmg flat (Enhance Crit) Pot:3</option>
+                    <option value="crit-rate">MaxLv:24 Crit rate (Enhance Crit) Pot:1</option>
+                    <option value="dex">Return:85pt, MaxLv:10, -Acc (Enhance Accuary) lv-18x</option>
+                </select>
+            </div>
+            <div class="stat-box">
+                <p>Stat Lv</p>
+                <select name="stat-lv" id="" class="quick-css">
+                    <option value="0"></option>
+                    <option value="10">Max</option>
+                </select>
+            </div>
+        </div>
+
+                <div class="postives">
+            <div class="stat-box">
+                <p>Stat</p>
+                <select name="stat" id="" class="quick-css">
+                    <option value="0"></option>
+                    <option value="dex">MaxLv:10, Dex% (Enhance Stat) Pot:10</option>
+                    <option value="atk">MaxLv:16, Atk% (Enhance Attack) Pot:10</option>
+                    <option value="crit">MaxLv:24 Crit dmg flat (Enhance Crit) Pot:3</option>
+                    <option value="crit-rate">MaxLv:24 Crit rate (Enhance Crit) Pot:1</option>
+                    <option value="dex">Return:85pt, MaxLv:10, -Acc (Enhance Accuary) lv-18x</option>
+
+                </select>
+            </div>
+            <div class="stat-box">
+                <p>Stat Lv</p>
+                <select name="stat-lv" id="" class="quick-css">
+                    <option value="0"></option>
+                    <option value="10">Max</option>
+                </select>
+            </div>
+        </div>
+
+        <p class="postive-header">Negative Stats</p>
+
+        <div class="postives">
+            <div class="stat-box">
+                <p>Stat</p>
+                <select name="stat" id="" class="quick-css">
+                    <option value="0"></option>
+                    <option value="dex">Return:85pt, MaxLv:10, -Acc (Enhance Accuary) lv-18</option>
+                    <option value="atk">Return:73pt, MaxLv:16, -Acc% (Enhance Accuary) lv-7</option>
+                    <option value="crit">Return:79pt, MaxLv:24 -MATK% (Enhance Attack) lv-16</option>
+                    <option value="crit-rate">Return:85pt, -Magic Pierce% (Enhance Attack) lv-9</option>
+                </select>
+            </div>
+            <div class="stat-box">
+                <p>Stat Lv</p>
+                <select name="stat-lv" id="" class="quick-css">
+                    <option value="0"></option>
+                    <option value="10">Max</option>
+                </select>
+            </div>
+        </div>
+
+                <div class="postives">
+            <div class="stat-box">
+                <p>Stat</p>
+                <select name="stat" id="" class="quick-css">
+                    <option value="0"></option>
+                    <option value="dex">Return:85pt, MaxLv:10, -Acc (Enhance Accuary) lv-18</option>
+                    <option value="atk">Return:73pt, MaxLv:16, -Acc% (Enhance Accuary) lv-7</option>
+                    <option value="crit">Return:79pt, MaxLv:24 -MATK% (Enhance Attack) lv-16</option>
+                    <option value="crit-rate">Return:85pt, -Magic Pierce% (Enhance Attack) lv-9</option>
+                </select>
+            </div>
+            <div class="stat-box">
+                <p>Stat Lv</p>
+                <select name="stat-lv" id="" class="quick-css">
+                    <option value="0"></option>
+                    <option value="10">Max</option>
+                </select>
+            </div>
+        </div>
+
+                <div class="postives">
+            <div class="stat-box">
+                <p>Stat</p>
+                <select name="stat" id="" class="quick-css">
+                    <option value="0"></option>
+                    <option value="dex">Return:85pt, MaxLv:10, -Acc (Enhance Accuary) lv-18</option>
+                    <option value="atk">Return:73pt, MaxLv:16, -Acc% (Enhance Accuary) lv-7</option>
+                    <option value="crit">Return:79pt, MaxLv:24 -MATK% (Enhance Attack) lv-16</option>
+                    <option value="crit-rate">Return:85pt, -Magic Pierce% (Enhance Attack) lv-9</option>
+                </select>
+            </div>
+            <div class="stat-box">
+                <p>Stat Lv</p>
+                <select name="stat-lv" id="" class="quick-css">
+                    <option value="0"></option>
+                    <option value="10">Max</option>
+                </select>
+            </div>
+        </div>
+
+                <div class="postives">
+            <div class="stat-box">
+                <p>Stat</p>
+                <select name="stat" id="" class="quick-css">
+                    <option value="0"></option>
+                    <option value="dex">Return:85pt, MaxLv:10, -Acc (Enhance Accuary) lv-18</option>
+                    <option value="atk">Return:73pt, MaxLv:16, -Acc% (Enhance Accuary) lv-7</option>
+                    <option value="crit">Return:79pt, MaxLv:24 -MATK% (Enhance Attack) lv-16</option>
+                    <option value="crit-rate">Return:85pt, -Magic Pierce% (Enhance Attack) lv-9</option>
+                </select>
+            </div>
+            <div class="stat-box">
+                <p>Stat Lv</p>
+                <select name="stat-lv" id="" class="quick-css">
+                    <option value="0"></option>
+                    <option value="10">Max</option>
+                </select>
+            </div>
+        </div>
+
+                <div class="postives">
+            <div class="stat-box">
+                <p>Stat</p>
+                <select name="stat" id="" class="quick-css">
+                    <option value="0"></option>
+                    <option value="dex">Return:85pt, MaxLv:10, -Acc (Enhance Accuary) lv-18</option>
+                    <option value="atk">Return:73pt, MaxLv:16, -Acc% (Enhance Accuary) lv-7</option>
+                    <option value="crit">Return:79pt, MaxLv:24 -MATK% (Enhance Attack) lv-16</option>
+                    <option value="crit-rate">Return:85pt, -Magic Pierce% (Enhance Attack) lv-9</option>
+                </select>
+            </div>
+            <div class="stat-box">
+                <p>Stat Lv</p>
+                <select name="stat-lv" id="" class="quick-css">
+                    <option value="0"></option>
+                    <option value="10">Max</option>
+                </select>
+            </div>
+        </div>
+
+                <div class="postives">
+            <div class="stat-box">
+                <p>Stat</p>
+                <select name="stat" id="" class="quick-css">
+                    <option value="0"></option>
+                    <option value="dex">Return:85pt, MaxLv:10, -Acc (Enhance Accuary) lv-18</option>
+                    <option value="atk">Return:73pt, MaxLv:16, -Acc% (Enhance Accuary) lv-7</option>
+                    <option value="crit">Return:79pt, MaxLv:24 -MATK% (Enhance Attack) lv-16</option>
+                    <option value="crit-rate">Return:85pt, -Magic Pierce% (Enhance Attack) lv-9</option>
+                </select>
+            </div>
+            <div class="stat-box">
+                <p>Stat Lv</p>
+                <select name="stat-lv" id="" class="quick-css">
+                    <option value="0"></option>
+                    <option value="10">Max</option>
+                </select>
+            </div>
+        </div>
+
+                <div class="postives">
+            <div class="stat-box">
+                <p>Stat</p>
+                <select name="stat" id="" class="quick-css">
+                    <option value="0"></option>
+                    <option value="dex">Return:85pt, MaxLv:10, -Acc (Enhance Accuary) lv-18</option>
+                    <option value="atk">Return:73pt, MaxLv:16, -Acc% (Enhance Accuary) lv-7</option>
+                    <option value="crit">Return:79pt, MaxLv:24 -MATK% (Enhance Attack) lv-16</option>
+                    <option value="crit-rate">Return:85pt, -Magic Pierce% (Enhance Attack) lv-9</option>
+                </select>
+            </div>
+            <div class="stat-box">
+                <p>Stat Lv</p>
+                <select name="stat-lv" id="" class="quick-css">
+                    <option value="0"></option>
+                    <option value="10">Max</option>
+                </select>
+            </div>
+        </div>
+
+                <div class="postives">
+            <div class="stat-box">
+                <p>Stat</p>
+                <select name="stat" id="" class="quick-css">
+                    <option value="0"></option>
+                    <option value="dex">Return:85pt, MaxLv:10, -Acc (Enhance Accuary) lv-18</option>
+                    <option value="atk">Return:73pt, MaxLv:16, -Acc% (Enhance Accuary) lv-7</option>
+                    <option value="crit">Return:79pt, MaxLv:24 -MATK% (Enhance Attack) lv-16</option>
+                    <option value="crit-rate">Return:85pt, -Magic Pierce% (Enhance Attack) lv-9</option>
+                </select>
+            </div>
+            <div class="stat-box">
+                <p>Stat Lv</p>
+                <select name="stat-lv" id="" class="quick-css">
+                    <option value="0"></option>
+                    <option value="10">Max</option>
+                </select>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>
+            This is an independent Toram fan site. Use it at your own risk; we are not responsible for any damages or issues arising from its use.
+        </p>
+    </footer>
+</body>
+</html>
