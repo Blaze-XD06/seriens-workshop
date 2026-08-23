@@ -1,0 +1,102 @@
+        body {
+            font-family: arial, roboto;
+            color: white;
+            background-color: black;
+            margin: 0px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            width: auto;
+            background-color: rgba(37, 150, 190);
+        }
+
+        .main-title {
+            margin: 0px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .header-link {
+            color: white;
+            text-decoration: none;            
+            font-size: 20px;
+            font-weight: bold;
+            padding: 4px;
+            border: solid 2px white;
+            border-radius: 15px;
+        }
+
+        main {
+            margin-left: 20px;
+        }
+
+        .mini-header {
+            font-size: large;
+        }
+
+        .sr-box {
+            height: 5px;
+            color: greenyellow;
+            margin-bottom: 5px;
+        }
+
+        .lv-selecter-box{
+            height: 40px;
+            display: flex;
+            margin-top: 0px;
+        }
+
+        .lv-selecter {
+            height: 30px;
+            color: white;
+            background-color: black;
+            margin-top: 10px;
+            margin-left: 10px;
+            padding: 4px;
+            border: solid 1px white;
+            border-radius: 7px;
+        }
+
+        .js-reload-button {
+            height: 30px;
+            margin-top: 10px;
+            margin-left: 5px;
+            color: white;
+            background-color: black;
+            padding: 6px;
+            border: solid 1px white;
+            border-radius: 7px;
+
+        }
+
+        .postives {
+            display: flex;
+            margin-bottom: 7px;
+        }
+
+        .postive-header {
+            border-bottom: 3px double white;
+        }
+
+        .stat-box {
+            display: flex;
+            height: 35px;
+            margin-left: 10px;
+        }
+
+        .quick-css {
+            height: 30px;
+            margin-top: 10px;
+            margin-left: 5px;
+            color: white;
+            background-color: black;
+            padding: 6px;
+            border: solid 1px white;
+            border-radius: 7px;
+        }
+
+        footer {
+            margin-top: 100px;
+        }

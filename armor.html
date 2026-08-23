@@ -1,114 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="style.css">
     <title>Sereins Workshop</title>
     <link rel="icon" type="image/png" href="pics/Screenshot from 2026-08-22 00-18-43.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: arial, roboto;
-            color: white;
-            background-color: black;
-            margin: 0px;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            padding: 20px;
-            width: auto;
-            background-color: rgba(37, 150, 190);
-        }
-
-        .main-title {
-            margin: 0px;
-            font-size: 20px;
-            font-weight: bold;
-        }
-        .header-link {
-            color: white;
-            text-decoration: none;            
-            font-size: 20px;
-            font-weight: bold;
-            padding: 4px;
-            border: solid 2px white;
-            border-radius: 15px;
-        }
-
-        main {
-            margin-left: 20px;
-        }
-
-        .mini-header {
-            font-size: large;
-        }
-
-        .sr-box {
-            height: 5px;
-            color: greenyellow;
-            margin-bottom: 5px;
-        }
-
-        .lv-selecter-box{
-            height: 40px;
-            display: flex;
-            margin-top: 0px;
-        }
-
-        .lv-selecter {
-            height: 30px;
-            color: white;
-            background-color: black;
-            margin-top: 10px;
-            margin-left: 10px;
-            padding: 4px;
-            border: solid 1px white;
-            border-radius: 7px;
-        }
-
-        .js-reload-button {
-            height: 30px;
-            margin-top: 10px;
-            margin-left: 5px;
-            color: white;
-            background-color: black;
-            padding: 6px;
-            border: solid 1px white;
-            border-radius: 7px;
-
-        }
-
-        .postives {
-            display: flex;
-            margin-bottom: 7px;
-        }
-
-        .postive-header {
-            border-bottom: 3px double white;
-        }
-
-        .stat-box {
-            display: flex;
-            height: 35px;
-            margin-left: 10px;
-        }
-
-        .quick-css {
-            height: 30px;
-            margin-top: 10px;
-            margin-left: 5px;
-            color: white;
-            background-color: black;
-            padding: 6px;
-            border: solid 1px white;
-            border-radius: 7px;
-        }
-
-        footer {
-            margin-top: 100px;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -116,13 +13,13 @@
             <p class="main-title">Lazy Serein's Workshop</p>
         </div>
         <div>
-            <a href="" class="header-link">Weapons</a>
+            <a href="weapon.html" class="header-link">Weapon</a>
         </div>
     </header>
 
     <main>
         <p class="mini-header">Craftsman's Sttatting of Armor -Automatic Version-</p>
-        <p>A armor statting simulator that calculates steps, success rates, and material costs.</p>
+        <p>A armors statting simulator that calculates steps, success rates, and material costs.</p>
         <p>By default, this simulates statting for the latest level cap. To simulate another level, enter your character's level and press 'Reload.</p>
 
         <div class="sr-box">
@@ -143,7 +40,6 @@
                 <p>Stat</p>
                 <select name="stat" id="" class="quick-css">
                     <option value="0">
-                        <option value="0"></option>
                     <option value="dex">MaxLv:32, Critical Rate (Enhance Critical) Pot:1</option>
                     <option value="dex">MaxLv:32, Critical Rate% (Enhance Critical) Pot:1</option>
                     <option value="dex">MaxLv:24, Critical Damage (Enhance Critical) Pot:3</option>
@@ -211,7 +107,6 @@
                     <option value="dex">MaxLv:12, % Reduce Dmg (Bullet) (Enhance Defense) Pot:2</option>
                     <option value="dex">MaxLv:12, % Reduce Dmg (Bowling) (Enhance Defense) Pot:2</option>
                     <option value="dex">MaxLv:12, % Reduce Dmg (Floor) (Enhance Defense) Pot:2</option>
-                    </option>
                 </select>
             </div>
             <div class="stat-box">
@@ -227,6 +122,8 @@
             <div class="stat-box">
                 <p>Stat</p>
                 <select name="stat" id="Postive-Stat-Selecter" class="quick-css">
+                    <option value="dex"></option>
+                    <option value="dex">MaxLv:12, % Reduce Dmg (Player Epicenter) (Enhance Defense) Pot:3</option>
                 </select>
             </div>
             <div class="stat-box">
