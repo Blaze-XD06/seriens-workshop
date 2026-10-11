@@ -540,34 +540,37 @@ const stats = {
   },
 };
 
-const statSelect = document.getElementById("stat-selecter");
+const statContainers = document.querySelectorAll(".postives");
 
-for (const key in stats) {
-  const option = document.createElement("option");
+statContainers.forEach((container) => {
+    const statSelect = container.querySelector(".stat-selecter");
+    const statLevelSelect = container.querySelector(".stat-level");
 
-  option.value = key;
-  option.textContent = `MaxLv:${stats[key].maxLevel}, ${stats[key].name} (${stats[key].type}) Pot:${stats[key].pot}`;
-
-  statSelect.appendChild(option);
-};
-
-
-const statLevelSelect = document.getElementById("stat-level");
-
-statSelect.addEventListener("change", function () {
-    const selected = stats[statSelect.value];
-
-    statLevelSelect.innerHTML = '<option value="max">Max</option>';
-
-    if (!selected) return;
-
-    for (let i = 1; i <= selected.maxLevel; i++) {
+    for (const key in stats) {
         const option = document.createElement("option");
-        option.value = i;
-        option.textContent = i;
-        statLevelSelect.appendChild(option);
-    }
-});
 
+        option.value = key;
+        option.textContent = `MaxLv:${stats[key].maxLevel}, ${stats[key].name} (${stats[key].type}) Pot:${stats[key].pot}`;
+
+        statSelect.appendChild(option);
+    }
+
+    statSelect.addEventListener("change", function () {
+        const selected = stats[statSelect.value];
+
+        statLevelSelect.innerHTML = '<option value="max">Max</option>';
+
+        if (!selected) return;
+
+        for (let i = 1; i <= selected.maxLevel; i++) {
+            const option = document.createElement("option");
+
+            option.value = i;
+            option.textContent = i;
+
+            statLevelSelect.appendChild(option);
+        }
+    });
+});
 
 
