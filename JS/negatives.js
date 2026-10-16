@@ -425,13 +425,6 @@ const negativeStats = {
         type: "Enhance Critical",
         matCost: { amount: 5, category: "Mana" },
     },
-    placeholderNegative: {
-        name: "Placeholder Negative Stat (For Spacing)",
-        maxLevel: 1,
-        pot: 0,
-        type: "Placeholder",
-        matCost: { amount: 0, category: "Mana" },
-    },
 };
 
 

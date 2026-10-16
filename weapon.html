@@ -20,7 +20,7 @@
     </header>
 
     <main>
-        <p class="mini-header">Craftsman's Sttatting of Weapons -Automatic Version-</p>
+        <p class="mini-header">Craftsman's Statting of Weapons -Automatic Version-</p>
         <p>A weapon statting simulator that calculates steps, success rates, and material costs.</p>
         <p>By default, this simulates statting for the latest level cap. To simulate another level, enter your character's level and press 'Reload.</p>
 
@@ -35,7 +35,7 @@
             </select>
             <button class="js-reload-button">Reload</button>
         </div>
-        <p class="postive-header">Positive Stats</p>
+        <p class="headers">Positive Stats</p>
 
         <div class="postives">
             <div class="stat-box">
@@ -165,7 +165,7 @@
             </div>
         </div>
 
-        <p class="postive-header">Negative Stats</p>
+        <p class="headers">Negative Stats</p>
 
         <div class="negatives">
             <div class="stat-box">
@@ -313,6 +313,100 @@
 
 
     </main>
+
+    <section class="potential">
+        <p style="margin-bottom: 0px;"><u>Gear Potential</u></p>
+        <div style="display: flex;height: 40px;">
+            <p>Original Potential</p>
+            <select class="quick-css">
+                <option value="">0</option>
+            </select> 
+        </div>
+    </section>
+
+    <section class="bs-prof">
+        <p class="headers" style="margin-bottom: 0px;">BS Prof Lv (for meterial cost reduction)</p>
+        <div style="display: flex;height: 40px;">
+            <p>BS Prof Lv</p>
+            <select class="quick-css">
+                <option value="">0</option>
+            </select> 
+            <p style="margin-left: 5px;">( 0% reuction of material cost )</p>
+        </div>
+    </section>
+
+    <section class="bs-prof">
+        <p class="headers" style="margin-bottom: 0px;">Smith skills (Compassion Skills)</p>
+        <div style="display: flex;height: 40px;">
+            <p>Metal Compassion</p>
+            <select class="quick-css">
+                <option value="">10</option>
+            </select>
+            <p>Cloth Compassion</p>
+            <select class="quick-css">
+                <option value="">10</option>
+            </select>
+            <p>Mana Compassion</p>
+            <select class="quick-css">
+                <option value="">10</option>
+            </select>
+    
+        </div>
+        <div style="display: flex;height: 40px;">
+
+            <p>Beast Compassion</p> 
+            <select class="quick-css">
+                <option value="">10</option>
+            </select>
+            <p>Wood Compassion</p>
+            <select class="quick-css">
+                <option value="">10</option>
+            </select>
+            <p>Medicine Compassion</p>
+            <select class="quick-css">
+                <option value="">10</option>
+            </select>
+
+        </div>
+    </section>
+
+    <section class="bs-prof">
+        <p class="headers" style="margin-bottom: 0px;">Smith skills (Anvil Skills)</p>
+        <div style="display: flex;height: 40px;">
+
+            <p>Craftsman's Anvil</p>
+            <select class="quick-css">
+                <option value="">10</option>
+            </select>
+
+            <p>Blacksmith's Anvil</p>
+            <select class="quick-css">
+                <option value="">10</option>
+            </select>
+            
+        </div>
+        <div style="display: flex;height: 40px;">
+
+            <p>Master's Anvil</p> 
+            <select class="quick-css">
+                <option value="">10</option>
+            </select>
+            <p>Master's Anvil II</p>
+            <select class="quick-css">
+                <option value="">10</option>
+            </select>
+            
+        </div>
+    </section>
+
+    <!--added Gear Pot, BS prof lv, Smith skills Compassion, Smith skills anvil and Result*\ -->
+    <!--Need to finnish the layout so i can start with the calculations but before that I got make all the options work-->
+
+    <section class="bs-prof">
+        <p class="headers" >Result</p>
+        <div>Stats of weapon</div>
+        <div>Mat cost</div>
+    </section>
 
     <footer>
         <p>
