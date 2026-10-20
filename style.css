@@ -71,7 +71,7 @@ main {
 
 }
 
-.postives,.negatives {
+.positives,.negatives {
     display: flex;
     margin-bottom: 7px;
 }
